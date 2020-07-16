@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile</title>
+  <style>
+    body{
+      background: #000 !important;
+      color: #fff !important;
+      padding: 20px 50px;
+    }
+    .profile{
+      display: flex;
+    }
+    .profile > img {
+      width:200px;
+      margin-right: 20px
+    }
+    .titles{
+      border-bottom: 1px groove;
+      padding-bottom: 10px;
+    }
+    .experienceAndSkills{
+      display: flex;
+      justify-content: space-between;
+    }
+    .experienceAndSkills > .skills{
+      margin-left: 30px;
+    }
+    .itemProject{
+      display:flex;
+    }
+    .itemProject > img {
+      width: 180px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+</head>
+<body>
+  {%block content%}{%endblock%}
+  {%block addJob%}{%endblock%}
+  {%block addProject%}{%endblock%}
+  {%block login%}{%endblock%}
+  {%block register%}{%endblock%}
+</body>
+</html>

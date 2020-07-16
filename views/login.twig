@@ -1,0 +1,13 @@
+{%extends "meanTemplate.twig"%}
+
+{%block login%}
+  <h1>Login</h1>
+  <div class="alert alert-info" role="alert">{{messageError}}</div>
+  <form action="/auth" method="post">
+    <label>user: </label>
+    <input name="user" type="text"/> <br/> <br/>
+    <label>password: </label>
+    <input name="password" type="password"/><br/> <br/>
+    <input class="btn btn-info" type="submit"/>
+  </form>  
+{%endblock%}

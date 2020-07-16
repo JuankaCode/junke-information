@@ -1,0 +1,17 @@
+www.getcomposer.org/download  // for the better manager of requires(automatic)
+
+composer.phar install // for install composer in the terminal
+
+php composer.phar require illuminate/database // for install eloquent https://packagist.org/packages
+
+php composer require laminas/laminas-diactoros // for working with route
+
+php compuser.phar require aura/router  // psr7 too router
+
+php compuser.phar require twig/twig // for protect vulnerability of users
+
+php compuser.phar require respect/validator // for validation of users data posts
+
+php composer.phar require vlucas/phpdotenv  //for envaroment varibles for database connection
+
+

@@ -1,0 +1,18 @@
+{%extends "meanTemplate.twig"%}
+
+{%block addProject%}
+  <div class="container" >
+    <div class="row mt-3">
+      <div class="col-8 offset-2 col-lg-4 offset-lg-4 rounded p-5" style="border: 1px solid #fff;">
+        <h1 class="mb-5">Add Project!!</h1>
+        <form  action="addProject.php" method="post">
+          <label for="">Title</label>
+          <input name="title" type="text"><br/><br/><br/>
+          <label for="">Description:</label><br>
+          <textarea name="description" cols="30" rows="7"></textarea><br/><br/><br/>
+          <button type="submit" type="button" class="btn btn-danger">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>  
+{%endblock%}

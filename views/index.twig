@@ -1,0 +1,80 @@
+{%extends "meanTemplate.twig"%}
+
+{%block content%} 
+  <div class="profile">
+    <img src="https://i.imgur.com/1rSV9jq.jpg" alt="profile">
+    <div class="profile__data">
+      <h2 style="margin: 0">{{lastName}}</h2>
+      <h4>PHP Developer</h4>
+      <ul>
+        <li>Gmail: junkedev@gmail.com</li>
+        <li>Phone: 72289152</li>
+        <li>Linkin: https://linkedin.com</li>
+        <li>Twitter: @dev_junker</li>
+      </ul>
+    </div>
+  </div>
+  <h3 class="titles">Career Summary</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolorum, fuga modi illo voluptates libero beatae necessitatibus temporibus? Numquam delectus nam cupiditate aut vero eligendi, modi consequatur nisi fuga expedita minima tenetur exercitationem, fugit dolore quam nihil veniam corrupti hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eaque quibusdam asperiores natus consectetur facilis necessitatibus ad sint totam eum. Quia esse voluptatibus nemo suscipit animi. Fuga nulla rerum minima iste ullam doloremque. Asperiores corrupti, esse itaque, officia culpa neque natus accusantium nostrum repudiandae aperiam perferendis beatae eos magni enim?</p>
+  <div class="experienceAndSkills">
+    <div>
+      <h3 class="titles">Work Experience</h3>
+      <ul>
+        {% for job in jobs %}
+          <li>
+            <strong> {{job.title|e}} </strong> <br/><br/>
+            {{job.getDescription()}}
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis non tenetur earum at quas hic officiis delectus rem consequatur iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, rerum id. Accusamus assumenda eaque iure hic soluta laborum facere! Ipsum ut delectus, eveniet perspiciatis pariatur animi cum dolorem tempora assumenda.</p>
+          <strong>Achievements</strong>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul><br/>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  
+    <div class="skills">
+      <h3 class="titles" style="width: 150px;">Skills & Tools</h3>
+      <h4>Backend</h4>
+        <ul>
+          <li>PHP</li>
+          <li>Nodejs</li>
+        </ul>
+      <h4>Frontend</h4>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+        </ul>
+      <h4>Frameworks</h4>
+        <ul>
+          <li>React</li>
+          <li>Laravel</li>
+          <li>Bootstraps</li>
+        </ul>
+      <h3 class="titles">Languages</h3>
+        <ul>
+          <li>Spanish</li>
+          <li>English</li>
+          <li>Quechua</li>
+        </ul>
+    </div>
+  </div>
+
+  <h3 class="titles">Projects</h3>
+  <div>
+    {%for project in projects%}
+      <h4> {{project.title}}</h4>
+      <div class='itemProject'>
+        <img src=https://i.imgur.com/i52aDDh.png alt=project x>
+        <div>
+          <p>{{project.description}}</p>
+          <strong>{{project.title }}</strong>
+        </div>
+      </div>
+    {%endfor%}
+  </div>
+{%endblock%}
